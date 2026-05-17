@@ -1,0 +1,11 @@
+{
+    "username": "your@email.com",
+    "password": "yourpassword",
+    "region": "US",
+    "hubitat_ip": "192.168.x.x",
+    "maker_api_app": "xxx",
+    "access_token": "your-access-token-here",
+    "device_control_panel": "xxx",
+    "device_upper_oven": "xxx",
+    "device_lower_oven": "xxx"
+}
