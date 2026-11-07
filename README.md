@@ -154,6 +154,8 @@ nano /etc/systemd/system/smarthq-bridge.service
 Description=SmartHQ to Hubitat Bridge
 After=network-online.target
 Wants=network-online.target
+StartLimitIntervalSec=3600
+StartLimitBurst=5
 
 [Service]
 Type=simple
@@ -161,12 +163,13 @@ User=root
 WorkingDirectory=/opt/smarthq-bridge
 ExecStart=/opt/smarthq-bridge/venv/bin/python3 /opt/smarthq-bridge/bridge.py
 Restart=always
-RestartSec=30
+RestartSec=300
 StandardOutput=journal
 StandardError=journal
 
 [Install]
 WantedBy=multi-user.target
+
 ```
 
 ```bash
